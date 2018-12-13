@@ -1,0 +1,38 @@
+<!--
+Auto-generated
+Do not edit!!!
+-->
+<div class="container-fluid kb-main-wrapper" id="layout">
+
+  <div class="row kb-header k-grid-header">
+    <div class="col-2 kb-logo">
+      <kb-image #image0 [config]="$config.components.image0" [id]="'image0'" [src]="'assets/images/logo_default.png'">
+        <img [routerLink]="[image0.config.navigateUrl]" [src]="image0.src" [style.width.px]="image0.config.width" [style.height.px]="image0.config.height"
+          [alt]="image0.config.alt" />
+      </kb-image>
+
+    </div>
+    <div class="col-7 kb-col-placeholder">
+    </div>
+    <div class="col-2 kb-languages text-right">
+      <kb-languages-drop-down [id]="'languagesDdl'" [name]="''" [title]="''" [config]="$config.components.languagesDdl">
+      </kb-languages-drop-down>
+
+    </div>
+    <div class="col-1 kb-user-drop-down-wrapper">
+      <kb-user-drop-down></kb-user-drop-down>
+    </div>
+  </div>
+  <div class="row kb-header-content-wrapper">
+    <div class="col-2 kb-side-navigation kb-mobile-navigation">
+      <kb-navigation-panel-bar [id]="'navigationpanelbar0'" [navigationData]="$navigationData" [config]="$config.components.navigationpanelbar0">
+      </kb-navigation-panel-bar>
+    </div>
+    <div class="col-10 kb-content k-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <kb-notification></kb-notification>
+  <div kendoDialogContainer></div>
+</div>

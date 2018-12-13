@@ -1,0 +1,11 @@
+<!--
+Auto-generated
+Do not edit!!!
+-->
+<ul class="kb-notification">
+  <li *ngFor="let n of notifications; let i = index" [class]="'k-notification-' + n.type" [@notificationAnimation]="n.state" (@notificationAnimation.done)="animationDone($event, i, n)">
+    <span [class]="'kb-notification-icon ' + (n.type | kbToIcon)"></span>
+    <div class="kb-notification-content" [innerHTML]="n.message"></div>
+    <span class="kb-close-btn k-icon k-i-close" (click)="onClose(n, i)"></span>
+  </li>
+</ul>

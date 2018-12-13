@@ -1,0 +1,50 @@
+<!--
+Auto-generated
+Do not edit!!!
+-->
+<div class="kb-login k-widget container">
+  <div class="row">
+    <kb-top-section></kb-top-section>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="kb-login-header">
+        <img src="assets/images/logo_default_login.png">
+        <h2 [innerHTML]="$config.title"></h2>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <kb-middle-section></kb-middle-section>
+  </div>
+  <div class="row" ngShow="$dataProviders">
+    <div class="col">
+      <p class="kb-provider-name">
+        <i class="fa fa-lightbulb-o"></i> Authenticate for
+        <strong>{{$dataProviders}}</strong>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <form class="k-form" [formGroup]="$loginForm" novalidate>
+        <label class="k-form-field">
+                    <span>User Name</span>
+                    <input class="k-textbox" formControlName="userName" autocomplete="username" />
+                </label>
+        <label class="k-form-field">
+                    <span>Password</span>
+                    <input class="k-textbox" formControlName="password" type="password" autocomplete="current-password" />
+                </label>
+        <button type="button" class="k-button k-primary" (click)="login()">Login</button>
+      </form>
+    </div>
+  </div>
+  <div class="k-notification k-notification-error k-notification-wrap" *ngIf="$loginError">
+    <span class="k-icon k-i-error"></span>
+    <span [textContent]="$loginError"></span>
+  </div>
+  <div class="row">
+    <kb-bottom-section></kb-bottom-section>
+  </div>
+</div>

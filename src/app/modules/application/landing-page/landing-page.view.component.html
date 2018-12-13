@@ -1,0 +1,12 @@
+<!--
+Auto-generated
+Do not edit!!!
+-->
+<kb-top-section></kb-top-section>
+<div class="kb-modules-list-wrapper">
+  <a *ngFor="let module of $modules" class="kb-module-thumbnail" [routerLink]="module.children[0].routerLink" [title]="module.title">
+    <i class="fa {{ module.thumbnail.icon }}" [style.background]="module.thumbnail.background" [style.color]="module.thumbnail.color"></i>
+    <span title="{{ module.labelKey | translate }}">{{ module.labelKey | translate }}</span>
+  </a>
+</div>
+<kb-bottom-section></kb-bottom-section>

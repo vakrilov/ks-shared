@@ -1,0 +1,16 @@
+<!--
+Auto-generated
+Do not edit!!!
+-->
+<kendo-panelbar #nav (stateChange)="stateChange($event)">
+  <kendo-panelbar-item *ngFor="let module of navigationData" title="" class="k-item" [expanded]="module.expanded">
+    <ng-template kendoPanelBarItemTitle>
+      <i class="fa {{module.thumbnail.icon}}"></i>
+      <span>
+                {{module.titleKey | translate}}
+            </span>
+    </ng-template>
+    <kendo-panelbar-item *ngFor="let child of module.children" [title]="child.titleKey | translate" [routerLink]="child.routerLink" [selected]="child.routerLink == router.url">
+    </kendo-panelbar-item>
+  </kendo-panelbar-item>
+</kendo-panelbar>

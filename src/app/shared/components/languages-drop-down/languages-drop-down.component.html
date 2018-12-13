@@ -1,0 +1,9 @@
+<!--
+Auto-generated
+Do not edit!!!
+-->
+<div class="kb-languages-drop-down" *ngIf="config.data && config.data.length > 1">
+  <kendo-dropdownlist [id]="id" [title]="title" [data]="config.data" [textField]="config.textField" [valueField]="config.valueField" [valuePrimitive]="true"
+    [(ngModel)]="languageKey" (valueChange)="changeHandler($event)" (selectionChange)="selectionHandler($event)">
+    </kendo-dropdownlist>
+</div>

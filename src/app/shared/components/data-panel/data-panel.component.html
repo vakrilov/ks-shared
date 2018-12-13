@@ -1,0 +1,26 @@
+<!--
+Auto-generated
+Do not edit!!!
+-->
+<div class="kb-data-form-wrapper k-widget">
+  <kb-data-form [model]="model" [viewFormArray]="viewFormArray">
+    <ng-content></ng-content>
+  </kb-data-form>
+  <div class="row" *ngIf="config.allowEdit">
+    <div class="col-12 kb-data-form-commands">
+      <hr class="k-separator">
+      <a (click)="onEdit()" *ngIf="!updateInProcess && !insertInProcess" class="k-button k-button-icontext" [ngClass]="{'kb-disabled': !canEdit }">
+        <span [class]="config.buttonIcons.edit"></span> {{ config.buttonLabelKeys.editKey | translate }}
+      </a>
+      <a (click)="onSave()" *ngIf="updateInProcess || insertInProcess" class="k-button k-button-icontext k-primary k-grid-update" [ngClass]="{'kb-disabled': !viewFormArray.dirty || !viewFormArray.valid }">
+        <span [class]="config.buttonIcons.save"></span> {{ config.buttonLabelKeys.saveKey | translate }}
+      </a>
+      <a (click)="onCancel()" *ngIf="updateInProcess || insertInProcess" class="k-button k-button-icontext k-grid-cancel">
+        <span [class]="config.buttonIcons.cancel"></span> {{ config.buttonLabelKeys.cancelKey | translate }}
+      </a>
+      <a (click)="onDelete()" *ngIf="updateInProcess" class="k-button k-button-icontext k-grid-delete">
+        <span [class]="config.buttonIcons.destroy"></span> {{ config.buttonLabelKeys.destroyKey | translate }}
+      </a>
+    </div>
+  </div>
+</div>

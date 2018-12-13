@@ -1,0 +1,22 @@
+<!--
+Auto-generated
+Do not edit!!!
+-->
+<RadSideDrawer [gesturesEnabled]="enableSideDrawer" ios:class="-ios" android:class="-android">
+  <GridLayout tkDrawerContent rows="auto, *">
+    <StackLayout class="user-info" *ngIf="user && user.email" orientation="horizontal">
+      <Label text="&#xf2bd;" class="fa"></Label>
+      <StackLayout>
+        <Label text="{{ user && user.username }}" verticalAlignment="center"></Label>
+        <Label text="{{ user && user.email }}" verticalAlignment="center"></Label>
+      </StackLayout>
+    </StackLayout>
+    <ScrollView row="1">
+      <side-drawer-items></side-drawer-items>
+    </ScrollView>
+  </GridLayout>
+
+  <GridLayout tkMainContent>
+    <page-router-outlet actionBarVisibility="never"></page-router-outlet>
+  </GridLayout>
+</RadSideDrawer>

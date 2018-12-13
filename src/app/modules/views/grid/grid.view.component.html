@@ -1,0 +1,50 @@
+<!--
+Auto-generated
+Do not edit!!!
+-->
+<div class="kb-data-grid">
+  <div class="row">
+    <div class="col-12">
+      <kb-top-section></kb-top-section>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h2>{{ $config.titleKey | translate }}</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <kb-middle-section></kb-middle-section>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <kb-grid #grid [config]="$config.components.grid" [dataService]="$dataServices['Customers']" [state]="$dataServicesState['Customers']" [view]="$dataServicesResult['Customers']">
+        <kendo-grid [pageable]="grid.config.pageable" [sortable]="grid.config.sortable" [filterable]="grid.config.filterable" [groupable]="grid.config.groupable"
+          [data]="grid.view | async" [pageSize]="grid.state.take" [skip]="grid.state.skip" [sort]="grid.state.sort" [filter]="grid.state.filter"
+          [group]="grid.state.group" [loading]="grid.dataService.pendingData" (dataStateChange)="grid.dataStateChange($event)" kendoGridSelectBy
+          [selectedKeys]="grid.selectedKeys" [selectable]="{ mode: 'single' }" (selectionChange)="grid.selectionChange($event)" [resizable]="grid.config.resizable"
+          [reorderable]="grid.config.reorderable">
+          <kendo-grid-column [field]="'website'" [filterable]="true" [filter]="'text'" [sortable]="true" [title]="'modules.views.views.grid.columns.website' | translate">
+          </kendo-grid-column>
+          <kendo-grid-column [field]="'country'" [filterable]="true" [filter]="'text'" [sortable]="true" [title]="'modules.views.views.grid.columns.country' | translate">
+          </kendo-grid-column>
+          <kendo-grid-column [field]="'phone'" [filterable]="true" [filter]="'text'" [sortable]="true" [title]="'modules.views.views.grid.columns.phone' | translate">
+          </kendo-grid-column>
+          <kendo-grid-column [field]="'address'" [filterable]="true" [filter]="'text'" [sortable]="true" [title]="'modules.views.views.grid.columns.address' | translate">
+          </kendo-grid-column>
+          <kendo-grid-column [field]="'name'" [filterable]="true" [filter]="'text'" [sortable]="true" [title]="'modules.views.views.grid.columns.name' | translate">
+          </kendo-grid-column>
+          </kendo-grid>
+      </kb-grid>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <kb-bottom-section></kb-bottom-section>
+    </div>
+  </div>
+</div>

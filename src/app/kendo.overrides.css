@@ -1,0 +1,31 @@
+/*
+* Auto-generated
+* Do not edit!!!
+*/
+
+.k-input,
+.k-textbox,
+.k-numerictextbox,
+.k-maskedtextbox,
+.k-datepicker,
+.k-timepicker,
+.k-slider-horizontal {
+  width: 100%;
+}
+
+kb-date-time-picker>span {
+  display: flex;
+}
+
+kb-date-time-picker .k-datepicker,
+kb-date-time-picker .k-timepicker {
+  flex: 1;
+}
+
+textarea[rows] {
+  height: auto;
+}
+
+kb-image img {
+  max-width: 100%;
+}
