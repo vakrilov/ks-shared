@@ -17,7 +17,14 @@ export const config: NgModule = {
   declarations: [HomeViewBaseComponent, HomeViewComponent],
   entryComponents: [  ],
   exports: [HomeViewComponent],
-  imports: [CommonModule, SharedModule,NativeScriptRouterModule],
+  imports: [
+    CommonModule,
+    SharedModule,
+    NativeScriptRouterModule,
+    NativeScriptRouterModule.forChild([
+      { path: "", component: HomeViewComponent },
+    ])
+  ],
   providers: []
 };
 

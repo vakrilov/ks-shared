@@ -7,7 +7,7 @@ import { Routes } from '@angular/router';
 import { NativeScriptRouterModule, NSEmptyOutletComponent } from 'nativescript-angular/router';
 import { ApplicationModuleComponent } from './application.module.component.tns';
 import { AppLayoutViewComponent } from './app-layout/app-layout.view.component.tns';
-import { HomeViewComponent } from './home/home.view.component.tns';
+// import { HomeViewComponent } from './home/home.view.component.tns';
 
 const routes: Routes = [
   {
@@ -26,10 +26,10 @@ const routes: Routes = [
           }
         ]
       },
-      {
-        path: 'home',
-        component: HomeViewComponent
-      }
+      // {
+      //   path: 'home',
+      //   component: HomeViewComponent
+      // }
     ]
   }
 ];

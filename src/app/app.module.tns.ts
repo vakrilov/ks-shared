@@ -5,6 +5,15 @@
 import { NgModule } from '@angular/core';
 
 import { config } from './app.config.tns';
+import { Router } from '@angular/router';
 
 @NgModule(config)
-export class AppModule {}
+export class AppModule {
+
+    constructor(rotuer: Router){
+        rotuer.events.subscribe((e) =>{
+            console.log("---> " + e.toString());
+        })
+    }
+
+}
